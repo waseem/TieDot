@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120527105027) do
+ActiveRecord::Schema.define(:version => 20120527121421) do
 
   create_table "houses", :force => true do |t|
     t.string   "name"
@@ -56,6 +56,28 @@ ActiveRecord::Schema.define(:version => 20120527105027) do
     t.integer  "session_number"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "rs_attendances", :force => true do |t|
+    t.integer  "rs_session_id"
+    t.integer  "rs_member_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "rs_members", :force => true do |t|
+    t.string   "division_number"
+    t.string   "name"
+    t.string   "state"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "rs_sessions", :force => true do |t|
+    t.string   "session_number"
+    t.integer  "total_sittings"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end
