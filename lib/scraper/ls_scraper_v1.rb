@@ -7,4 +7,15 @@ ls_site = "http://164.100.47.132/Members_Attendance/datewise_results.aspx?xlok=1
 
 browser.goto ls_site
 
-p browser.body.table(:id, "DataGrid1").rows.first.as.each {|a| a.click }
+total_links = browser.body.table(:id, "DataGrid1").rows.first.as.size
+
+body = browser.body
+
+(1..total_links).each do |i|
+  body.table(:id,"DataGrid1").rows[2].tds.each {|td| p td.html}
+  next_link = body.table(:id,"DataGrid1").rows.first.as[i-1]
+  next_link.click
+  body = browser.body
+end
+
+
