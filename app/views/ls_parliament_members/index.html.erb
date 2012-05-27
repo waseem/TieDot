@@ -1,0 +1,27 @@
+<h1>Listing ls_parliament_members</h1>
+
+<table>
+  <tr>
+    <th>Ls parliament</th>
+    <th>Division</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ls_parliament_members.each do |ls_parliament_member| %>
+  <tr>
+    <td><%= ls_parliament_member.ls_parliament_id %></td>
+    <td><%= ls_parliament_member.division_id %></td>
+    <td><%= ls_parliament_member.name %></td>
+    <td><%= link_to 'Show', ls_parliament_member %></td>
+    <td><%= link_to 'Edit', edit_ls_parliament_member_path(ls_parliament_member) %></td>
+    <td><%= link_to 'Destroy', ls_parliament_member, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ls parliament member', new_ls_parliament_member_path %>

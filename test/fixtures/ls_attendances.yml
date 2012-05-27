@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ls_parliament_member_id: MyString
+  status: false
+
+two:
+  ls_parliament_member_id: MyString
+  status: false

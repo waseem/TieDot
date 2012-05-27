@@ -1,0 +1,25 @@
+<h1>Listing ls_sessions</h1>
+
+<table>
+  <tr>
+    <th>Ls parliament</th>
+    <th>Session number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ls_sessions.each do |ls_session| %>
+  <tr>
+    <td><%= ls_session.ls_parliament_id %></td>
+    <td><%= ls_session.session_number %></td>
+    <td><%= link_to 'Show', ls_session %></td>
+    <td><%= link_to 'Edit', edit_ls_session_path(ls_session) %></td>
+    <td><%= link_to 'Destroy', ls_session, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ls session', new_ls_session_path %>

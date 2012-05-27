@@ -1,0 +1,21 @@
+<%= form_for(@ls_parliament) do |f| %>
+  <% if @ls_parliament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ls_parliament.errors.count, "error") %> prohibited this ls_parliament from being saved:</h2>
+
+      <ul>
+      <% @ls_parliament.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.number_field :number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

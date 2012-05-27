@@ -1,0 +1,2 @@
+module LsParliamentsHelper
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ls_parliament_id: 1
+  division_id: 1
+  name: MyString
+
+two:
+  ls_parliament_id: 1
+  division_id: 1
+  name: MyString

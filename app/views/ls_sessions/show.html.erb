@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ls parliament:</b>
+  <%= @ls_session.ls_parliament_id %>
+</p>
+
+<p>
+  <b>Session number:</b>
+  <%= @ls_session.session_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_ls_session_path(@ls_session) %> |
+<%= link_to 'Back', ls_sessions_path %>

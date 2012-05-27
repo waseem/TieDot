@@ -1,4 +1,12 @@
 Tiedot::Application.routes.draw do
+  resources :ls_sessions
+
+  resources :ls_parliament_members
+
+  resources :ls_parliaments
+
+  resources :houses
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

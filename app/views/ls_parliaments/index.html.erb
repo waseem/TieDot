@@ -1,0 +1,25 @@
+<h1>Listing ls_parliaments</h1>
+
+<table>
+  <tr>
+    <th>House</th>
+    <th>Number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ls_parliaments.each do |ls_parliament| %>
+  <tr>
+    <td><%= ls_parliament.house_id %></td>
+    <td><%= ls_parliament.number %></td>
+    <td><%= link_to 'Show', ls_parliament %></td>
+    <td><%= link_to 'Edit', edit_ls_parliament_path(ls_parliament) %></td>
+    <td><%= link_to 'Destroy', ls_parliament, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ls parliament', new_ls_parliament_path %>

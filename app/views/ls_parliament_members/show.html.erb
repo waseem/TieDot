@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ls parliament:</b>
+  <%= @ls_parliament_member.ls_parliament_id %>
+</p>
+
+<p>
+  <b>Division:</b>
+  <%= @ls_parliament_member.division_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @ls_parliament_member.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_ls_parliament_member_path(@ls_parliament_member) %> |
+<%= link_to 'Back', ls_parliament_members_path %>

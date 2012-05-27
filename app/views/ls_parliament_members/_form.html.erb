@@ -1,0 +1,29 @@
+<%= form_for(@ls_parliament_member) do |f| %>
+  <% if @ls_parliament_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ls_parliament_member.errors.count, "error") %> prohibited this ls_parliament_member from being saved:</h2>
+
+      <ul>
+      <% @ls_parliament_member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ls_parliament_id %><br />
+    <%= f.number_field :ls_parliament_id %>
+  </div>
+  <div class="field">
+    <%= f.label :division_id %><br />
+    <%= f.number_field :division_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
